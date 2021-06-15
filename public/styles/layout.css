@@ -26,30 +26,17 @@ body {
 
  body {
   font-family: 'Source Sans Pro', sans-serif;
-  width: 100%;
-  position: relative;
  }
 
  nav {
   font-family: 'Bungee', cursive;
  }
 
- main {
+ .container {
    width: 90%;
    background-color: #f4f1ec;
    display: flex;
    flex-direction: column;
+   justify-content: center;
    margin: auto;
  }
-
-
- hr {
-  color: black;
-  height: 2px;
-  border: 0;
-  clear: both;
-  display: block;
-  width: 100%;
-  background: black;
-  height: 3;
-}

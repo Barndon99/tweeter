@@ -1,0 +1,31 @@
+.new_tweet {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 100%;
+}
+
+button {
+  background-color: rgb(51, 130, 248);
+  color: white;
+  font-family: 'Bungee', cursive;
+}
+
+.counter {
+  float: right;
+  font-family: 'Bungee', cursive;
+}
+
+.noPadding {
+  margin: 0, 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+textarea#tweet-text {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: inherit;
+  border: 0;
+  border-bottom: grey 5px solid;
+  width: 100%;
+}
