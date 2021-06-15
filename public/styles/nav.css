@@ -9,7 +9,7 @@ nav {
   align-items:flex-end;
   width: 100%;
   position: fixed;
-  top: 0;
+  z-index: 1;
 }
 
 .writeTweet {
