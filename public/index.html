@@ -34,6 +34,11 @@
 
     <!-- New Tweet Form JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+    <!-- TimeGo library for tracking dates 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" integrity="sha512-RlGrSmkje9EE/FXpJKWf0fvOlg4UULy/blvNsviBX9LFwMj/uewXVoanRbxTIRDXy/0A3fBQppTmJ/qOboJzmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
 
   <body>
@@ -45,7 +50,7 @@
         <i class="fas fa-chevron-down"></i>
       </div>
     </nav>
-    <header>
+    <header id="profile">
       <div class="userProfile">
       <div>
           <img src="/images/profile-hex.png"> 
@@ -68,6 +73,24 @@
             <output name="counter" class="counter" for="tweet-text"></output>
           </div>
         </form>
+        <article id="tweet">
+          <header>
+            <i height:="40px" class="fas fa-user-alt userIcon"></i>
+            <p>Brandon Rowlandson</p>
+            <a id="userTweet"><p>@Brandon</p></a>
+          </header>
+          <div class="bodyTweet">
+            <p>Some text goes here</p>
+          </div>
+          <footer>
+            <time id="date" class="timeago" datetime="2016-07-07T09:24:17Z"></time>
+            <div id="iconsFooter">
+              <i class="fas fa-flag"></i>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-heart"></i>
+            </div>
+          </footer>
+        </article>
       </section>
     </main>
   </body>

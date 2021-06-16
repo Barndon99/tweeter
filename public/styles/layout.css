@@ -48,3 +48,83 @@ body {
  .negativeValues {
    color: red;
  }
+
+
+ #tweet {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+ }
+
+ article#tweet {
+  height: auto;
+  width: 100%;
+  border: grey 5px solid;
+  color: inherit;
+  margin: 30px 0px 30px 0px;
+  height: 200px;
+ }
+
+ #tweet header {
+   width: 90%;
+   height: auto;
+   flex-direction: row;
+   display: flex;
+   align-items: center;
+   align-self: flex-start;
+  padding-left: 2.5%;
+ }
+
+ #tweet p {
+  width: 100%;
+  
+ }
+
+ #tweet footer {
+   justify-content: center;
+   align-items: center;
+   border-top: grey 3px solid;
+   width: 95%;
+   margin: 0 auto;
+   padding-top: 0mm;
+   height: auto;
+   font-size: 15px;
+ }
+
+ #userTweet {
+   float: right;
+   display: flex;
+   color: lightgrey;
+ }
+
+ #iconsFooter {
+   float: right;
+   display: flex;
+ }
+
+ #date {
+   display: flex;
+ }
+
+ #tweet.hoverOver {
+  box-shadow: 5px 10px;
+ }
+
+ #tweet .iconColor {
+   color: navy;
+ }
+
+ div.bodyTweet {
+  align-self: flex-start;
+  margin: auto;
+  width: 95%;
+ }
+
+ #tweet .userIcon {
+   margin-right: 2.5%;
+ }
+
+ .footer {
+   display: flex;
+ }
