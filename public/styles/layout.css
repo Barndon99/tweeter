@@ -50,14 +50,14 @@ body {
  }
 
 
- #tweet {
+ .tweet {
    display: flex;
    flex-direction: column;
    justify-content: space-around;
    align-items: center;
  }
 
- article#tweet {
+ article.tweet {
   height: auto;
   width: 100%;
   border: grey 5px solid;
@@ -66,7 +66,7 @@ body {
   height: 200px;
  }
 
- #tweet header {
+ .tweet header {
    width: 90%;
    height: auto;
    flex-direction: row;
@@ -76,12 +76,12 @@ body {
   padding-left: 2.5%;
  }
 
- #tweet p {
+ .tweet p {
   width: 100%;
   
  }
 
- #tweet footer {
+ .tweet footer {
    justify-content: center;
    align-items: center;
    border-top: grey 3px solid;
@@ -108,11 +108,11 @@ body {
    display: flex;
  }
 
- #tweet.hoverOver {
+ .tweet:hover {
   box-shadow: 5px 10px;
  }
 
- #tweet .iconColor {
+ .iconColor:hover {
    color: navy;
  }
 

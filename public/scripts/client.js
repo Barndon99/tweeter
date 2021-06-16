@@ -1,32 +1,23 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-const tweetData =  {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-  "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-  "created_at": 1461116232227
-};
-
 $(document).ready(function(){
 
+  const renderTweets = function(tweets) {
+    // loops through tweets
+    for (const tweet of tweets) {
+      // calls createTweetElement for each tweet
+      const $tweet = createTweetElement(tweet);
+      $('.container .new-tweet').append($tweet);
+    }
+  }
+  // Creates a new DOM object for each tweet
   const createTweetElement = function (tweet) {
     const userName = tweet.user.name;
     const userHandle = tweet.user.handle;
     const content = tweet.content.text;
     const time = tweet.created_at;
-    const avatar = tweet.user.avatar;
+    const avatar = tweet.user.avatars;
   
     const $tweet = `
-    <article id="tweet">
+    <article class="tweet" class="">
       <header>
          <img src="${avatar}" alt="Profile Picture">
          <p>${userName}</p>
@@ -36,22 +27,27 @@ $(document).ready(function(){
          <p>${content}</p>
        </div>
        <footer>
-         <time id="date" class="timeago" datetime="${time}"></time>
+         <time id="date" class="timeago" datetime="${time}">${timeago.format(time)}</time>
          <div id="iconsFooter">
-             <i class="fas fa-flag"></i>
-             <i class="fas fa-retweet"></i>
-             <i class="fas fa-heart"></i>
+             <i class="fas fa-flag iconColor"></i>
+             <i class="fas fa-retweet iconColor"></i>
+             <i class="fas fa-heart iconColor"></i>
        </div>
        </footer>
     </article>`
     
     return $tweet;
   }
-
-  const $tweet = createTweetElement(tweetData);
-  
-  console.log($tweet); // to see what it looks like
-  
-  $('.container .new-tweet').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-  
+  // Get's tweets from the /tweets path
+  const loadTweets = function() {
+    $.ajax({
+      type: "GET",
+      url: "/tweets"
+    }).done(function (data) {
+      console.log(data);
+      renderTweets(data);
+    });
+  }
+  //Call loadTweets to render function
+  loadTweets();
 });
