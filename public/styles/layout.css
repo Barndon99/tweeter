@@ -63,7 +63,6 @@ body {
   border: grey 5px solid;
   color: inherit;
   margin: 30px 0px 30px 0px;
-  height: 200px;
  }
 
  .new-tweet {
@@ -82,7 +81,7 @@ body {
 
  .tweet p {
   width: 100%;
-  
+  word-wrap: break-word;
  }
 
  .tweet footer {
@@ -128,4 +127,9 @@ body {
 
  #tweet .userIcon {
    margin-right: 2.5%;
+ }
+
+ #error, #error2 {
+   display: none;
+   border: red 5px solid;
  }

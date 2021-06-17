@@ -64,6 +64,8 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div id="error" display="none"><p>Too many Characters</p></div>
+        <div id="error2" display="none"><p>Please provide some input</p></div>
         <form method="POST" action="/tweets/" id="submitTweet">
           <textarea name="text" id="tweet-text" value="140" placeholder="What are you humming about?"></textarea>
           <div class="tweetButton">

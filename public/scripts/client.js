@@ -1,13 +1,22 @@
 $(document).ready(function(){
 
   const renderTweets = function(tweets) {
+    $(".container .tweets").empty();
     // loops through tweets
     for (const tweet of tweets) {
       // calls createTweetElement for each tweet
       const $tweet = createTweetElement(tweet);
       $('.container .tweets').prepend($tweet);
     }
-  }
+  };
+
+  //Define escape function
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // Creates a new DOM object for each tweet
   const createTweetElement = function (tweet) {
     const userName = tweet.user.name;
@@ -19,15 +28,15 @@ $(document).ready(function(){
     const $tweet = `
     <article class="tweet" class="">
       <header>
-         <img src="${avatar}" alt="Profile Picture">
-         <p>${userName}</p>
-         <a id="userTweet"><p>${userHandle}</p></a>
+         <img src="${escape(avatar)}" alt="Profile Picture">
+         <p>${escape(userName)}</p>
+         <a id="userTweet"><p>${escape(userHandle)}</p></a>
        </header>
        <div class="bodyTweet">
-         <p>${content}</p>
+         <p>${escape(content)}</p>
        </div>
        <footer>
-         <time id="date" class="timeago" datetime="${time}">${timeago.format(time)}</time>
+         <time id="date" class="timeago" datetime="${escape(time)}">${timeago.format(time)}</time>
          <div id="iconsFooter">
              <i class="fas fa-flag iconColor"></i>
              <i class="fas fa-retweet iconColor"></i>
@@ -47,22 +56,21 @@ $(document).ready(function(){
       console.log(data);
       renderTweets(data);
     });
-  }
-  //Call loadTweets to render function
+  };
   loadTweets();
 
   $('form').submit(function(event){
     event.preventDefault();
-   
+    $('#error, #error2').hide(1000);
     const formData = $(this).serialize();
-    console.log(formData);
+  
     if((formData.length - 5) > 140) {
-      return alert("Too many characters!!");
+      return $('#error').slideDown(1000);
     }
 
     if(formData === "text=") {
       $('textarea').val('');
-      return alert("Cannot Submit a blank tweet");
+      return $('#error2').slideDown(1000);
     }
 
     $.post('/tweets', formData).done(function(data){
