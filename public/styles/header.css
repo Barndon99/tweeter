@@ -17,3 +17,16 @@ header#profile {
   top: 140px;
   color: white;
 }
+
+ @media only screen and (min-width: 1024px) {
+   header#profile {
+     width: 50%;
+     margin: 160px 20px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+   .userProfile {
+    top: 0;
+   }
+}

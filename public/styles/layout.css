@@ -132,4 +132,18 @@ body {
  #error, #error2 {
    display: none;
    border: red 5px solid;
+   background-color: white;
+   color: red;
+   justify-content: center;
  }
+
+ @media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+  .container {
+    margin: 140px 20px;
+    width: 50%;
+  }
+}

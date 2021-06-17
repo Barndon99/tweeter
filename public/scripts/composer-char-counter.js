@@ -11,6 +11,7 @@ $(document).ready(function() {
   });
 });
 
+//Use Timeago to render the times of tweets
 $(document).ready(function() {
   const timeElement = $('time.timeago');
   const newTime = timeago.format(timeElement.attr("datetime"));
