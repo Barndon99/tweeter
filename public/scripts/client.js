@@ -5,7 +5,7 @@ $(document).ready(function(){
     for (const tweet of tweets) {
       // calls createTweetElement for each tweet
       const $tweet = createTweetElement(tweet);
-      $('.container .new-tweet').append($tweet);
+      $('.container .tweets').prepend($tweet);
     }
   }
   // Creates a new DOM object for each tweet

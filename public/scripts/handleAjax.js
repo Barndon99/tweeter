@@ -19,7 +19,8 @@ $(document).ready(function(){
       data: formData,
       dataType: "json",
     }).done(function (data) {
-      console.log("Submitted");
+      console.log("in function");
+      //loadTweets();
     });
 
     console.log('this seems to be working');

@@ -66,6 +66,10 @@ body {
   height: 200px;
  }
 
+ .new-tweet {
+  padding-top: 20px;
+ }
+
  .tweet header {
    width: 90%;
    height: auto;
