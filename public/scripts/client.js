@@ -50,4 +50,27 @@ $(document).ready(function(){
   }
   //Call loadTweets to render function
   loadTweets();
+
+  $('form').submit(function(event){
+    event.preventDefault();
+   
+    const formData = $(this).serialize();
+    console.log(formData);
+    if((formData.length - 5) > 140) {
+      return alert("Too many characters!!");
+    }
+
+    if(formData === "text=") {
+      $('textarea').val('');
+      return alert("Cannot Submit a blank tweet");
+    }
+
+    $.post('/tweets', formData).done(function(data){
+      $('textarea').val('');
+      $('.counter').val(140);
+      loadTweets();
+    });
+    
+    console.log('this seems to be working');
+  });
 });
