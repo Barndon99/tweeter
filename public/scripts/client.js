@@ -57,7 +57,6 @@ $(document).ready(function() {
       type: "GET",
       url: "/tweets"
     }).done(function (data) {
-      console.log(data);
       renderTweets(data);
     });
   };
