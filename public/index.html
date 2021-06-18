@@ -57,15 +57,23 @@
           <img src="/images/profile-hex.png"> 
       </div>
       <div>
-          <p><b>Brandon</b> Rowlandson</h2></p>
+          <p><b>Test</b> User</h2></p>
       </div>
       </div>
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <div id="error" display="none"><p>Too many Characters</p></div>
-        <div id="error2" display="none"><p>Please provide some input</p></div>
+        <div id="error" display="none">
+          <i class="fas fa-exclamation-triangle"></i>
+          <p>Too many Characters</p>
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div id="error2" display="none">
+          <i class="fas fa-exclamation-triangle"></i>
+          <p>Please provide some input</p>
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
         <form method="POST" action="/tweets/" id="submitTweet">
           <textarea name="text" id="tweet-text" value="140" placeholder="What are you humming about?"></textarea>
           <div class="tweetButton">
@@ -74,7 +82,8 @@
           </div>
         </form>
       </section>
-      <section class="tweets"></section>
+      <section class="tweets">
+      </section>
     </main>
   </body>
 </html>

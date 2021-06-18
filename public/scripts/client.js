@@ -1,4 +1,8 @@
-$(document).ready(function(){
+$(document).ready(function() {
+  //Enables Timestamps
+  const timeElement = $('time.timeago');
+  const newTime = timeago.format(timeElement.attr("datetime"));
+  timeElement.append(newTime);
 
   const renderTweets = function(tweets) {
     $(".container .tweets").empty();
@@ -43,10 +47,10 @@ $(document).ready(function(){
              <i class="fas fa-heart iconColor"></i>
        </div>
        </footer>
-    </article>`
+    </article>`;
     
     return $tweet;
-  }
+  };
   // Get's tweets from the /tweets path
   const loadTweets = function() {
     $.ajax({
@@ -58,17 +62,16 @@ $(document).ready(function(){
     });
   };
   loadTweets();
-
-  $('form').submit(function(event){
+  //Handles form submission with JQuery shorthand AJAX
+  $('form').submit(function(event) {
     event.preventDefault();
-    $('#error, #error2').hide(1000);
     const formData = $(this).serialize();
   
-    if((formData.length - 5) > 140) {
+    if ((formData.length - 5) > 140) {
       return $('#error').slideDown(1000);
     }
 
-    if(formData === "text=") {
+    if (formData === "text=") {
       $('textarea').val('');
       return $('#error2').slideDown(1000);
     }
@@ -78,7 +81,5 @@ $(document).ready(function(){
       $('.counter').val(140);
       loadTweets();
     });
-    
-    console.log('this seems to be working');
   });
 });

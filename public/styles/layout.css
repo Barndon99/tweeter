@@ -16,7 +16,7 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: rgb(255, 247, 174);
   font-size: 24px;
 }
 
@@ -34,7 +34,7 @@ body {
 
  .container {
    width: 90%;
-   background-color: #f4f1ec;
+   background-color: rgb(255, 247, 174);
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -60,7 +60,7 @@ body {
  article.tweet {
   height: auto;
   width: 100%;
-  border: grey 5px solid;
+  border: rgb(96, 171, 154) 5px solid;
   color: inherit;
   margin: 30px 0px 30px 0px;
  }
@@ -87,7 +87,7 @@ body {
  .tweet footer {
    justify-content: center;
    align-items: center;
-   border-top: grey 3px solid;
+   border-top: rgb(96, 171, 154) 3px solid;
    width: 95%;
    margin: 0 auto;
    padding-top: 0mm;
@@ -98,7 +98,7 @@ body {
  #userTweet {
    float: right;
    display: flex;
-   color: lightgrey;
+   color: rgb(255, 159, 178);
  }
 
  #iconsFooter {
@@ -116,7 +116,7 @@ body {
  }
 
  .iconColor:hover {
-   color: navy;
+   color: rgb(255, 159, 178);
  }
 
  div.bodyTweet {
@@ -131,10 +131,11 @@ body {
 
  #error, #error2 {
    display: none;
-   border: red 5px solid;
-   background-color: white;
-   color: red;
+   border: rgb(96, 171, 154) 5px solid;
+   background-color: rgb(255, 159, 178);
+   color: rgb(96, 171, 154);
    justify-content: center;
+   flex-direction: row;
  }
 
  @media only screen and (min-width: 1024px) {

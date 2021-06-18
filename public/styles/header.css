@@ -3,7 +3,7 @@ header#profile {
   height: 500px;
   margin: 0;
   padding: 0;
-  background-color: rgb(51, 130, 248);
+  background-color: rgb(255, 159, 178);
   background-image: url("https://www.transparenttextures.com/patterns/subtle-grey.png");
   z-index: 0;
 }
@@ -25,6 +25,7 @@ header#profile {
      display: flex;
      justify-content: center;
      align-items: center;
+     border-radius: 30px;
    }
    .userProfile {
     top: 0;

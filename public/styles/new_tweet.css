@@ -7,9 +7,10 @@
 }
 
 button {
-  background-color: rgb(51, 130, 248);
+  background-color: rgb(96, 171, 154);
   color: white;
   font-family: 'Bungee', cursive;
+  border-radius: 10px;
 }
 
 .counter {
@@ -26,6 +27,6 @@ textarea#tweet-text {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: inherit;
   border: 0;
-  border-bottom: grey 5px solid;
+  border-bottom: rgb(96, 171, 154) 5px solid;
   width: 100%;
 }

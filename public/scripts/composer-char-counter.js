@@ -4,18 +4,11 @@ $(document).ready(function() {
     const chars = $(this).val();
 
     if (chars.length < 141) {
-    $(".counter").html(`${140 - chars.length}`);
+      $(".counter").html(`${140 - chars.length}`);
     } else {
-    $(".counter").html(`<a class="negativeValues">${140 - chars.length}</a>`);
+      $(".counter").html(`<a class="negativeValues">${140 - chars.length}</a>`);
     }
   });
-});
-
-//Use Timeago to render the times of tweets
-$(document).ready(function() {
-  const timeElement = $('time.timeago');
-  const newTime = timeago.format(timeElement.attr("datetime"));
-  timeElement.append(newTime);
 });
 
 
