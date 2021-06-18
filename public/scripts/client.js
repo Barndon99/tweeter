@@ -65,7 +65,8 @@ $(document).ready(function() {
   $('form').submit(function(event) {
     event.preventDefault();
     const formData = $(this).serialize();
-  
+    $('#error, #error2').hide(1000);
+    
     if ((formData.length - 5) > 140) {
       return $('#error').slideDown(1000);
     }
